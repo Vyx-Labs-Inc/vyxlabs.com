@@ -1,20 +1,18 @@
+import { Nav } from './components/Nav'
 import { Hero } from './components/Hero'
-import { WhatWeDo } from './components/WhatWeDo'
-import { HowWeWork } from './components/HowWeWork'
-import { FocusAreas } from './components/FocusAreas'
-import { Projects } from './components/Projects'
+import { About } from './components/About'
+import { Work } from './components/Work'
 import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
 
 function App() {
   return (
-    <div className="min-h-screen bg-vyx-darker">
+    <div className="min-h-screen noise-bg">
+      <Nav />
       <main>
         <Hero />
-        <WhatWeDo />
-        <HowWeWork />
-        <FocusAreas />
-        <Projects />
+        <About />
+        <Work />
         <Contact />
       </main>
       <Footer />
