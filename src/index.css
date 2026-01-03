@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-vyx-primary: 59 130 246;
+    --color-vyx-accent: 99 102 241;
+    --color-vyx-dark: 10 10 15;
+    --color-vyx-darker: 5 5 8;
+    --color-vyx-surface: 17 17 24;
+    --color-vyx-border: 30 30 42;
+    --color-vyx-muted: 107 114 128;
+    --color-vyx-text: 229 231 235;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-vyx-darker text-vyx-text antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    @apply bg-vyx-accent/30 text-white;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-vyx-accent hover:bg-vyx-accent/90 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-vyx-accent/50 focus:ring-offset-2 focus:ring-offset-vyx-darker;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-vyx-text bg-vyx-surface hover:bg-vyx-border border border-vyx-border rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-vyx-accent/50 focus:ring-offset-2 focus:ring-offset-vyx-darker;
+  }
+
+  .section-container {
+    @apply max-w-5xl mx-auto px-6 lg:px-8;
+  }
+
+  .section-heading {
+    @apply text-xs font-medium tracking-widest text-vyx-accent uppercase mb-6;
+  }
+
+  .chip {
+    @apply inline-flex items-center px-3 py-1.5 text-xs font-medium text-vyx-muted bg-vyx-surface border border-vyx-border rounded-full;
+  }
+
+  .card {
+    @apply bg-vyx-surface border border-vyx-border rounded-xl p-6 transition-all duration-200 hover:border-vyx-accent/30;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 text-sm text-vyx-text bg-vyx-darker border border-vyx-border rounded-lg placeholder:text-vyx-muted focus:outline-none focus:border-vyx-accent/50 focus:ring-1 focus:ring-vyx-accent/50 transition-all duration-200;
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(to right, rgba(99, 102, 241, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .dot-bg {
+    background-image: radial-gradient(circle, rgba(99, 102, 241, 0.06) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

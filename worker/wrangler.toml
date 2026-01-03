@@ -1,0 +1,20 @@
+# Cloudflare Worker configuration for contact form email relay
+# See README.md for setup instructions
+
+name = "vyxlabs-contact"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+# Route configuration - uncomment and customize after creating the worker
+# routes = [
+#   { pattern = "vyxlabs.com/api/contact", zone_name = "vyxlabs.com" }
+# ]
+
+# Environment variables (set via Cloudflare dashboard or wrangler secret)
+# Required secrets:
+# - RESEND_API_KEY: API key from resend.com
+# - ALLOWED_ORIGIN: The domain allowed to submit the form (e.g., https://vyxlabs.com)
+
+[vars]
+TO_EMAIL = "andrei@vyxlabs.com"
+FROM_EMAIL = "contact@vyxlabs.com"
