@@ -23,6 +23,12 @@ const projects = [
     status: 'Active',
     description: 'Conversational AI book creation platform. From idea to KDP-ready manuscript and cover in under an hour.',
   },
+  {
+    name: 'Patent Pen',
+    category: 'Legal Tech / AI',
+    status: 'Active',
+    description: 'AI-powered patent document generation. Converts simple inputs into USPTO-compliant provisional applications with auto-generated technical drawings.',
+  },
 ]
 
 const focusAreas = [
@@ -32,6 +38,7 @@ const focusAreas = [
   'Privacy',
   'Developer Tools',
   'Publishing',
+  'Legal Tech',
 ]
 
 export function Work() {
